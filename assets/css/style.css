@@ -1,3 +1,36 @@
 body {
-	background: url();
+	background: url(https://cloud.githubusercontent.com/assets/26077051/24964997/c54dfe98-1f70-11e7-953c-029096ceff8a.jpg);
 }
+h1 {
+	background-color: #4d4d4c;
+	font-family: 'Fredericka the Great', cursive;
+	color: #6ae284;
+	text-align: center;
+	width: 100%;
+}
+#playerChoice {
+	background-color: #4d4d4c;
+	font-family: 'La Belle Aurore', cursive;
+	font-size: 30px;
+	color: #6ae284;
+	margin-left: 40px;
+	margin-right: 40px;
+}
+#choiceToAttack {
+	background-color: #4d4d4c;
+	font-family: 'La Belle Aurore', cursive;
+	font-size: 30px;
+	color: #6ae284;
+	margin-left: 40px;
+	margin-right: 40px;
+}
+
+
+
+
+
+
+
+
+/*font-family: 'Fredericka the Great', cursive;
+font-family: 'La Belle Aurore', cursive;*/
