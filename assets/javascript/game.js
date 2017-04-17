@@ -30,34 +30,29 @@ $('.one').on('click', function() {
 
 	console.log("Got a click on HP");
 
-	// if {
- //        var player1 = $('.one');
- //        $('.one').clone().appendTo('.playersChoice');
- //        $('.players .one').remove();
-       
-    
-	// if ($('.two').html() == 'Dumbledore'){
- //        var player2 = $('.two');
- //        $('#playersChoice').append(player2);
-    
-
- //        console.log("Player 2 was clicked!");
-   
-	// if($('.three').html() == '.three'){
- //        var player3 = $('.three');
- //        $('#playersChoice').append(player3);
-        
-    
-	// if($('.four').html() == '.four'){
- //        var player4 = $('.four');
- //        $('#playersChoice').append(player4);
-        
-
-	// }
-	// }
-	// }
-	// }
 });	
+
+$('.two').on('click', function() {
+	$('.playersChoice').append($('.two'));
+
+	console.log("Got a click on Dumbledore");
+
+});	
+
+$('.three').on('click', function() {
+	$('.playersChoice').append($('.three'));
+
+	console.log("Got a click on bellatrix");
+
+});	
+
+$('.four').on('click', function() {
+	$('.playersChoice').append($('.four'));
+
+	console.log("Got a click on voldemort");
+
+});	
+
 
 // Attack function
     $('#attackButton').on ('click', function() {
