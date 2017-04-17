@@ -8,6 +8,10 @@ h1 {
 	text-align: center;
 	width: 100%;
 }
+img {
+	width: 250px;
+	height: 150px;
+}
 #playerChoice {
 	background-color: #4d4d4c;
 	font-family: 'La Belle Aurore', cursive;
