@@ -12,19 +12,19 @@ var harryPotter = {
 
 var dumbledore = {
 	hp: 130,
-	attack: 6,
+	attack: 10,
 	counter: 10, 
 };
 
 var bellatrix = {
 	hp: 110, 
-	attack: 7, 
+	attack: 10, 
 	counter: 9, 
 };
 
 var voldemort = {
 	hp: 170, 
-	attack: 12, 
+	attack: 10, 
 	counter: 20, 
 };
 
@@ -52,16 +52,19 @@ $('.one').on('click', function() {
 	$('.two').on('click', function() {
 		$('.choiceToAttack').append($('.two'));
 		secondPlayer = dumbledore; 
+	$('.hpSecondPlayer').html(secondPlayer.hp);
 	});
 	// Bellatrix
 	$('.three').on('click', function() {
 		$('.choiceToAttack').append($('.three'));
 		secondPlayer = bellatrix;
+	$('.hpSecondPlayer').html(secondPlayer.hp);
 	});
 	// Voldemort
 	$('.four').on('click', function() {
 		$('.choiceToAttack').append($('.four'));
 		secondPlayer = voldemort;
+	$('.hpSecondPlayer').html(secondPlayer.hp);
 	});	
 });
 // Dumbledore as First Player
@@ -82,16 +85,21 @@ $('.two').on('click', function() {
 	$('.one').on('click', function() {
 		$('.choiceToAttack').append($('.one'));
 		secondPlayer = harryPotter; 
+		// secondPlayer.hp = harryPotter.hp;
+    $('.hpSecondPlayer').html(secondPlayer.hp);
+
 	});
 	// Bellatrix
 	$('.three').on('click', function() {
 		$('.choiceToAttack').append($('.three'));
 		secondPlayer = bellatrix;
+		$('.hpSecondPlayer').html(secondPlayer.hp);
 	});
 	// Voldemort
 	$('.four').on('click', function() {
 		$('.choiceToAttack').append($('.four'));
 		secondPlayer = voldemort;
+		$('.hpSecondPlayer').html(secondPlayer.hp);
 	});	
 });
 // Bellatrix as First Player
@@ -112,16 +120,19 @@ $('.three').on('click', function() {
 	$('.one').on('click', function() {
 		$('.choiceToAttack').append($('.one'));
 		secondPlayer = harryPotter; 
+		$('.hpSecondPlayer').html(secondPlayer.hp);
 	});
 	// Dumbledore
 	$('.two').on('click', function() {
 		$('.choiceToAttack').append($('.two'));
 		secondPlayer = dumbledore;
+		$('.hpSecondPlayer').html(secondPlayer.hp);
 	});
 	// Voldemort
 	$('.four').on('click', function() {
 		$('.choiceToAttack').append($('.four'));
 		secondPlayer = voldemort;
+		$('.hpSecondPlayer').html(secondPlayer.hp);
 	});	
 });
 
@@ -143,43 +154,53 @@ $('.four').on('click', function() {
 	$('.one').on('click', function() {
 		$('.choiceToAttack').append($('.one'));
 		secondPlayer = harryPotter; 
+		$('.hpSecondPlayer').html(secondPlayer.hp);
 	});
 	// Dumbledore
 	$('.two').on('click', function() {
 		$('.choiceToAttack').append($('.two'));
 		secondPlayer = dumbledore;
+		$('.hpSecondPlayer').html(secondPlayer.hp);
 	});
 	// Voldemort
 	$('.three').on('click', function() {
 		$('.choiceToAttack').append($('.three'));
 		secondPlayer = bellatrix;
+		$('.hpSecondPlayer').html(secondPlayer.hp);
 	});	
 });	
 // Attack function
-    $('.attackButton').on ('click', function() {
-    	secondPlayer.hp -= firstPlayer.attack; 
- 		firstPlayer.attack += firstPlayer.attack;
-    	firstPlayer.hp -= secondPlayer.counter;
-
-	});
-
-
-
-
-
-
-//click attack button (button didn't work before)
-
-
-
-//click attack damage defender, opponent loses HP, points at bottom of pic change
-
-//opponent counter attacks, players character loses HP, points at bottom of pic change
-
-//defender HP = 0, remove from defender area
-
-//player chooses new opponent
-
+$('.attackButton').on ('click', function() {
+   	secondPlayer.hp -= firstPlayer.attack; 
+ 	firstPlayer.attack += firstPlayer.attack;
+    firstPlayer.hp -= secondPlayer.counter;
+    $('.hpFirstPlayer').html(firstPlayer.hp);
+    $('.hpSecondPlayer').html(secondPlayer.hp);
+    	
+    	if (secondPlayer == harryPotter && secondPlayer.hp <= 0){
+    		$('.one').remove();
+    		$(firstPlayer.attack) = 10; 
+    		// $firstPlayer.attack.delete();
+    	}
+    	else if (secondPlayer == dumbledore && secondPlayer.hp <= 0){
+    		$('.two').remove(); 
+    		$(firstPlayer.attack) == 10; 
+    		// $($(firstPlayer.attack:reset));
+    		// $('.attackButton').clear();
+    	}
+    	else if (secondPlayer == bellatrix && secondPlayer.hp <= 0){
+    		$('.three').remove();
+    		$(firstPlayer.attack) == 10; 
+    		// $($(firstPlayer.attack:reset));
+    		// $('.attackButton').clear();
+   		}
+    	else if (secondPlayer == voldemort && secondPlayer.hp <= 0){
+    		$('.four').remove();
+    		$(firstPlayer.attack) == 10; 
+    		// $($(firstPlayer.attack:reset));
+    		// $('.attackButton').clear();
+   		}
+});
 //player wins by defeating all opponents
 
 //player loses if HP goes to 0 or below
