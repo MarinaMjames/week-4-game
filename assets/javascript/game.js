@@ -45,7 +45,7 @@ $('.one').on('click', function() {
 		$('.enemies').append($('.four')); 
 		firstPlayer = harryPotter;
 	}
-});
+
 
 // move enemies to choiceToAttack div on screen 
 	// Dumbledore
@@ -63,7 +63,7 @@ $('.one').on('click', function() {
 		$('.choiceToAttack').append($('.four'));
 		secondPlayer = voldemort;
 	});	
-
+});
 // Dumbledore as First Player
 $('.two').on('click', function() {
 
@@ -76,7 +76,7 @@ $('.two').on('click', function() {
 		$('.enemies').append($('.four'));
 		firstPlayer = dumbledore;
 	}
-});	
+	
 // move enemies to choiceToAttack div on screen
 	// Harry Potter
 	$('.one').on('click', function() {
@@ -93,7 +93,7 @@ $('.two').on('click', function() {
 		$('.choiceToAttack').append($('.four'));
 		secondPlayer = voldemort;
 	});	
-
+});
 // Bellatrix as First Player
 $('.three').on('click', function() {
 
@@ -106,7 +106,6 @@ $('.three').on('click', function() {
 		$('.enemies').append($('.four'));
 		firstPlayer = bellatrix;
 	}
-});
 
 // move enemies to choiceToAttack div on screen
 	// Harry Potter
@@ -124,6 +123,7 @@ $('.three').on('click', function() {
 		$('.choiceToAttack').append($('.four'));
 		secondPlayer = voldemort;
 	});	
+});
 
 // Voldemort as First Player
 $('.four').on('click', function() {
@@ -137,7 +137,7 @@ $('.four').on('click', function() {
 		$('.enemies').append($('.three'));
 		firstPlayer = voldemort;
 	}
-});	
+
 // move enemies to choiceToAttack div on screen
 	// Harry Potter
 	$('.one').on('click', function() {
@@ -154,7 +154,7 @@ $('.four').on('click', function() {
 		$('.choiceToAttack').append($('.three'));
 		secondPlayer = bellatrix;
 	});	
-
+});	
 // Attack function
     $('.attackButton').on ('click', function() {
     	secondPlayer.hp -= firstPlayer.attack; 
