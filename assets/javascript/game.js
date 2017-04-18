@@ -1,4 +1,9 @@
 
+// var firstPlayerFlag = 0; 
+var firstPlayer;
+
+var secondPlayer; 
+
 var harryPotter = {
 	hp: 180,
 	attack: 10,
@@ -23,93 +28,138 @@ var voldemort = {
 	counter: 20, 
 };
 
-//on click choose character
 
+//Created on click functions for each character in order to pick the players character and move the other characters to the attack div
+
+// On Click function to choose player one and move all other plays to choicetoattack
+
+// Harry Potter as First Player
 $('.one').on('click', function() {
-	$('.playersChoice').append($('.one'));
-	console.log("Got a click on HP");
-	//move enemies to different div on screen (html)
-
-	$('.enemies').append($('.two'));
-	$('.enemies').append($('.three'));
-	$('.enemies').append($('.four'));
-//on click choose opponent - move to defender area
-
-	$('.one').on('click', function() {
-		$('.choiceToAttack').append($('.two'));
-		$('.choiceToAttack').append($('.three'));
-		$('.choiceToAttack').append($('.four'));
-
-	// $('.two').on('click', function() {
-	// 	$('.defender').append($('.two'));
-	// 	$('.choiceToAttack').remove($('.two'));
 	
-	// });
+	if (!firstPlayer) {
+		$('.playersChoice').append($('.one'));
+
+// Move other characters to enemies station
+		$('.enemies').append($('.two'));
+		$('.enemies').append($('.three'));
+		$('.enemies').append($('.four')); 
+		firstPlayer = harryPotter;
+	}
 });
 
+// move enemies to choiceToAttack div on screen 
+	// Dumbledore
+	$('.two').on('click', function() {
+		$('.choiceToAttack').append($('.two'));
+		secondPlayer = dumbledore; 
+	});
+	// Bellatrix
+	$('.three').on('click', function() {
+		$('.choiceToAttack').append($('.three'));
+		secondPlayer = bellatrix;
+	});
+	// Voldemort
+	$('.four').on('click', function() {
+		$('.choiceToAttack').append($('.four'));
+		secondPlayer = voldemort;
+	});	
 
-// Harry Potter is choosen and you click on dumbledore as defender - move dumbledore to class='defender'
-
-
-// $('.two').on('click', function() {
-// 	$('.defender').append($('.two'));
-	
-// 	});
-	
-});	
-
+// Dumbledore as First Player
 $('.two').on('click', function() {
-	$('.playersChoice').append($('.two'));
-	//move enemies to different div on screen (html)
 
-	$('.enemies').append($('.one'));
-	$('.enemies').append($('.three'));
-	$('.enemies').append($('.four'));
-//on click choose opponent - move to defender area
-	$('.choiceToAttack').append($('.one'));
-	$('.choiceToAttack').append($('.three'));
-	$('.choiceToAttack').append($('.four'));
-
-	console.log("Got a click on Dumbledore");
-
+	if (!firstPlayer) {
+		$('.playersChoice').append($('.two'));
+	
+// Move other characters to enemies station
+		$('.enemies').append($('.one'));
+		$('.enemies').append($('.three'));
+		$('.enemies').append($('.four'));
+		firstPlayer = dumbledore;
+	}
 });	
+// move enemies to choiceToAttack div on screen
+	// Harry Potter
+	$('.one').on('click', function() {
+		$('.choiceToAttack').append($('.one'));
+		secondPlayer = harryPotter; 
+	});
+	// Bellatrix
+	$('.three').on('click', function() {
+		$('.choiceToAttack').append($('.three'));
+		secondPlayer = bellatrix;
+	});
+	// Voldemort
+	$('.four').on('click', function() {
+		$('.choiceToAttack').append($('.four'));
+		secondPlayer = voldemort;
+	});	
 
+// Bellatrix as First Player
 $('.three').on('click', function() {
-	$('.playersChoice').append($('.three'));
-	//move enemies to different div on screen (html)
 
-	$('.enemies').append($('.one'));
-	$('.enemies').append($('.two'));
-	$('.enemies').append($('.four'));
-//on click choose opponent - move to defender area
+	if (!firstPlayer) {
+		$('.playersChoice').append($('.three'));
 
-	$('.choiceToAttack').append($('.one'));
-	$('.choiceToAttack').append($('.two'));
-	$('.choiceToAttack').append($('.four'));
-	console.log("Got a click on bellatrix");
+// Move other characters to enemies station
+		$('.enemies').append($('.one'));
+		$('.enemies').append($('.two'));
+		$('.enemies').append($('.four'));
+		firstPlayer = bellatrix;
+	}
+});
 
-});	
+// move enemies to choiceToAttack div on screen
+	// Harry Potter
+	$('.one').on('click', function() {
+		$('.choiceToAttack').append($('.one'));
+		secondPlayer = harryPotter; 
+	});
+	// Dumbledore
+	$('.two').on('click', function() {
+		$('.choiceToAttack').append($('.two'));
+		secondPlayer = dumbledore;
+	});
+	// Voldemort
+	$('.four').on('click', function() {
+		$('.choiceToAttack').append($('.four'));
+		secondPlayer = voldemort;
+	});	
 
+// Voldemort as First Player
 $('.four').on('click', function() {
-	$('.playersChoice').append($('.four'));
-	//move enemies to different div on screen (html)
 
-	$('.enemies').append($('.one'));
-	$('.enemies').append($('.two'));
-	$('.enemies').append($('.three'));
-//on click choose opponent - move to defender area
-	$('.choiceToAttack').append($('.one'));
-	$('.choiceToAttack').append($('.two'));
-	$('.choiceToAttack').append($('.three'));
+	if (!firstPlayer) {
+		$('.playersChoice').append($('.four'));
 
-	console.log("Got a click on voldemort");
+// Move other characters to enemies station
+		$('.enemies').append($('.one'));
+		$('.enemies').append($('.two'));
+		$('.enemies').append($('.three'));
+		firstPlayer = voldemort;
+	}
 });	
-
-
+// move enemies to choiceToAttack div on screen
+	// Harry Potter
+	$('.one').on('click', function() {
+		$('.choiceToAttack').append($('.one'));
+		secondPlayer = harryPotter; 
+	});
+	// Dumbledore
+	$('.two').on('click', function() {
+		$('.choiceToAttack').append($('.two'));
+		secondPlayer = dumbledore;
+	});
+	// Voldemort
+	$('.three').on('click', function() {
+		$('.choiceToAttack').append($('.three'));
+		secondPlayer = bellatrix;
+	});	
 
 // Attack function
     $('.attackButton').on ('click', function() {
-
+    	secondPlayer.hp -= firstPlayer.attack; 
+ 		firstPlayer.attack += firstPlayer.attack;
+    	firstPlayer.hp -= secondPlayer.counter;
 
 	});
 
