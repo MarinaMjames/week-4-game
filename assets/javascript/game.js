@@ -30,6 +30,7 @@ var voldemort = {
 
 //Created on click functions for each character in order to pick the players character and move the other characters to the choiceToAttack div
 // Harry Potter as First Player
+
 $('.one').on('click', function() {
 
 	if (!firstPlayer) {
@@ -184,7 +185,7 @@ $('.attackButton').on ('click', function() {
     //Shows the hp for the first and second players on the webpage
     $('.hpFirstPlayer').html(firstPlayer.hp);
     $('.hpSecondPlayer').html(secondPlayer.hp);
-    
+
 // This removes harry potter from defender box if he is second player and has an hp of 0 and below
     	if (secondPlayer == harryPotter && secondPlayer.hp <= 0){
     		$('.one').remove();
