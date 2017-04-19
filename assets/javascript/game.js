@@ -1,25 +1,27 @@
+//global variables
+// variable used to select users character
 var firstPlayer;
-
+//variable used to select character they wish to fight
 var secondPlayer; 
-
+// harry potter's fight stats 
 var harryPotter = {
 	hp: 180,
 	attack: 6,
 	counter: 27, 
 };
-
+//dumbledore's fight stats
 var dumbledore = {
 	hp: 130,
 	attack: 4,
 	counter: 21, 
 };
-
+// bellatrix's fight stats
 var bellatrix = {
 	hp: 110, 
 	attack: 4, 
 	counter: 19, 
 };
-
+// voldemort's fight stats
 var voldemort = {
 	hp: 170, 
 	attack: 7, 
@@ -40,7 +42,6 @@ $('.one').on('click', function() {
 		firstPlayer = harryPotter;
 	}
 
-
 // move enemies to choiceToAttack div on screen 
 	// will move Dumbledore
 	$('.two').on('click', function() {
@@ -48,12 +49,14 @@ $('.one').on('click', function() {
 		secondPlayer = dumbledore; 
 	$('.hpSecondPlayer').html(secondPlayer.hp);
 	});
+
 	// will move Bellatrix
 	$('.three').on('click', function() {
 		$('.choiceToAttack').append($('.three'));
 		secondPlayer = bellatrix;
 	$('.hpSecondPlayer').html(secondPlayer.hp);
 	});
+
 	// will move Voldemort
 	$('.four').on('click', function() {
 		$('.choiceToAttack').append($('.four'));
@@ -61,6 +64,7 @@ $('.one').on('click', function() {
 	$('.hpSecondPlayer').html(secondPlayer.hp);
 	});	
 });
+
 // Dumbledore as First Player
 $('.two').on('click', function() {
 
@@ -79,15 +83,16 @@ $('.two').on('click', function() {
 	$('.one').on('click', function() {
 		$('.choiceToAttack').append($('.one'));
 		secondPlayer = harryPotter; 
-    $('.hpSecondPlayer').html(secondPlayer.hp);
-
+   		$('.hpSecondPlayer').html(secondPlayer.hp);
 	});
+
 	// will move Bellatrix
 	$('.three').on('click', function() {
 		$('.choiceToAttack').append($('.three'));
 		secondPlayer = bellatrix;
 		$('.hpSecondPlayer').html(secondPlayer.hp);
 	});
+
 	// will move Voldemort
 	$('.four').on('click', function() {
 		$('.choiceToAttack').append($('.four'));
@@ -95,6 +100,7 @@ $('.two').on('click', function() {
 		$('.hpSecondPlayer').html(secondPlayer.hp);
 	});	
 });
+
 // Bellatrix as First Player
 $('.three').on('click', function() {
 
@@ -115,12 +121,14 @@ $('.three').on('click', function() {
 		secondPlayer = harryPotter; 
 		$('.hpSecondPlayer').html(secondPlayer.hp);
 	});
+
 	// will move Dumbledore
 	$('.two').on('click', function() {
 		$('.choiceToAttack').append($('.two'));
 		secondPlayer = dumbledore;
 		$('.hpSecondPlayer').html(secondPlayer.hp);
 	});
+
 	// will move Voldemort
 	$('.four').on('click', function() {
 		$('.choiceToAttack').append($('.four'));
@@ -149,12 +157,14 @@ $('.four').on('click', function() {
 		secondPlayer = harryPotter; 
 		$('.hpSecondPlayer').html(secondPlayer.hp);
 	});
+
 	// will move Dumbledore
 	$('.two').on('click', function() {
 		$('.choiceToAttack').append($('.two'));
 		secondPlayer = dumbledore;
 		$('.hpSecondPlayer').html(secondPlayer.hp);
 	});
+
 	// will move Voldemort
 	$('.three').on('click', function() {
 		$('.choiceToAttack').append($('.three'));
@@ -174,6 +184,7 @@ $('.attackButton').on ('click', function() {
     //Shows the hp for the first and second players on the webpage
     $('.hpFirstPlayer').html(firstPlayer.hp);
     $('.hpSecondPlayer').html(secondPlayer.hp);
+    
 // This removes harry potter from defender box if he is second player and has an hp of 0 and below
     	if (secondPlayer == harryPotter && secondPlayer.hp <= 0){
     		$('.one').remove();
