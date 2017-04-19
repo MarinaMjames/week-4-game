@@ -2,24 +2,26 @@ body {
 	background: url(https://cloud.githubusercontent.com/assets/26077051/25161508/548f535e-248a-11e7-841e-a37b7414ca1e.jpg);
 }
 h1 {
-	background-color: #4d4d4c;
 	font-family: 'Fredericka the Great', cursive;
-	color: #6ae284;
+	color: #8B0000;
 	text-align: center;
-	width: 100%;
+	border-color: #8B0000;
+	border-style: double; 
+	border-width: 2px;
 }
 img {
-	width: 250px;
-	height: 150px;
+	width: 80%;
 }
-.playersChoice, .choiceToAttack, .enemies {
+.one, .two, .three, .four {
 	font-family: 'La Belle Aurore', cursive;
 	font-size: 30px;
-	color: #6ae284;
+	color: #8B0000;
 }
-
-
-
+.playersChoice, .enemies, .choiceToAttack {
+	font-family: 'Fredericka the Great', cursive;
+	font-size: 30px;
+	color: #8B0000;
+}
 /* Small devices (tablets, 768px and up) */
 @media (min-width: @screen-sm-min) { ... }
 
@@ -28,7 +30,3 @@ img {
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: @screen-lg-min) { ... }
-
-
-/*font-family: 'Fredericka the Great', cursive;
-font-family: 'La Belle Aurore', cursive;*/
