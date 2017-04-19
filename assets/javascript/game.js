@@ -179,28 +179,35 @@ $('.attackButton').on ('click', function() {
     	
     	if (secondPlayer == harryPotter && secondPlayer.hp <= 0){
     		$('.one').remove();
-    		$(firstPlayer.attack) = 10; 
+    		// $(firstPlayer.attack) = 10; 
     		// $firstPlayer.attack.delete();
     	}
     	else if (secondPlayer == dumbledore && secondPlayer.hp <= 0){
     		$('.two').remove(); 
-    		$(firstPlayer.attack) == 10; 
+    		// $(firstPlayer.attack) == 10; 
     		// $($(firstPlayer.attack:reset));
     		// $('.attackButton').clear();
     	}
     	else if (secondPlayer == bellatrix && secondPlayer.hp <= 0){
     		$('.three').remove();
-    		$(firstPlayer.attack) == 10; 
+    		// $(firstPlayer.attack) == 10; 
     		// $($(firstPlayer.attack:reset));
     		// $('.attackButton').clear();
    		}
     	else if (secondPlayer == voldemort && secondPlayer.hp <= 0){
     		$('.four').remove();
-    		$(firstPlayer.attack) == 10; 
+    		// $(firstPlayer.attack) == 10; 
     		// $($(firstPlayer.attack:reset));
     		// $('.attackButton').clear();
    		}
+
+   		if (firstPlayer.hp <= 0){
+   			$('.playersChoice').append('You Lose!');
+   		}
 });
-//player wins by defeating all opponents
+
+$('.resetButton').on('click', function() {
+
+});
 
 //player loses if HP goes to 0 or below
