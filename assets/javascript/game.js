@@ -48,21 +48,18 @@ $('.harry').click(function() {
 	$('.dumble').click(function() {
 		$('.choiceToAttack').appenbellad($('.dumble'));
 		enemyChoice = dumbledore; 
-	$('.hpEnemyChoiceEnemyChoiceEnemyChoice').html(enemyChoice.hp);
 	});
 
 	// will move Bellatrix
 	$('.bella').click(function() {
 		$('.choiceToAttack').append($('.bella'));
 		enemyChoice = bellatrix;
-	$('.hpEnemyChoice').html(enemyChoice.hp);
 	});
 
 	// will move Voldemort
 	$('.volde').click(function() {
 		$('.choiceToAttack').append($('.volde'));
 		enemyChoice = voldemort;
-	$('.hpEnemyChoice').html(enemyChoice.hp);
 	});	
 });
 
@@ -83,22 +80,19 @@ $('.dumble').click(function() {
 	// will move Harry Potterharry
 	$('.harry').click(function() {
 		$('.choiceToAttack').append($('.harry'));
-		enemyChoice = harryPotter; 
-   		$('.hpEnemyChoiceEnemyChoice').html(enemyChoice.hp);
+		enemyChoice = harryPotter;
 	});
 
 	// will move Bellatrix
 	$('.bella').click(function() {
 		$('.choiceToAttack').append($('.bella'));
 		enemyChoice = bellatrix;
-		$('.hpEnemyChoiceEnemyChoice').html(enemyChoice.hp);
 	});
 
 	// will move Voldemort
 	$('.volde').click(function() {
 		$('.choiceToAttack').append($('.volde'));
 		enemyChoice = voldemort;
-		$('.hpEnemyChoiceEnemyChoice').html(enemyChoice.hp);
 	});	
 });
 
@@ -120,21 +114,18 @@ $('.bella').click(function() {
 	$('.harry').click(function() {
 		$('.choiceToAttack').append($('.harry'));
 		enemyChoice = harryPotter; 
-		$('.hpEnemyChoice').html(enemyChoice.hp);
 	});
 
 	// will move Dumbledore
 	$('.bella').click(function() {
 		$('.choiceToAttack').append($('.bella'));
 		enemyChoice = dumbledore;
-		$('.hpEnemyChoiceEnemyChoice').html(enemyChoice.hp);
 	});
 
 	// will move Voldemort
 	$('.volde').click(function() {
 		$('.choiceToAttack').append($('.volde'));
 		enemyChoice = voldemort;
-		$('.hpEnemyChoiceEnemyChoice').html(enemyChoice.hp);
 	});	
 });
 
@@ -156,21 +147,18 @@ $('.volde').click(function() {
 	$('.harry').click(function() {
 		$('.choiceToAttack').append($('.harry'));
 		enemyChoice = harryPotter; 
-		$('.hpEnemyChoice').html(enemyChoice.hp);
 	});
 
 	// will move Dumbledore
 	$('.dumble').click(function() {
 		$('.choiceToAttack').append($('.dumble'));
 		enemyChoice = dumbledore;
-		$('.hpEnemyChoice').html(enemyChoice.hp);
 	});
 
 	// will move Voldemort
 	$('.bella').click(function() {
 		$('.choiceToAttack').append($('.bella'));
 		enemyChoice = bellatrix;
-		$('.hpEnemyChoice').html(enemyChoice.hp);
 	});	
 });	
 
@@ -183,8 +171,8 @@ $('.attackButton').click(function() {
  	//takes hp away from first play due to second players counter attack when the attack button is clicked
     playersChoice.hp -= enemyChoice.counter;
     //Shows the hp for the first and second players on the webpage
-    $('.hpPlayersChoice').html(playersChoice.hp);
-    $('.hpEnemyChoice').html(enemyChoice.hp);
+    $('.playersChoiceHp').html(playersChoice.hp);
+    $('.enemyChoiceHp').html(enemyChoice.hp);
 
 // This removes harry potter from defender box if he is second player and has an hp of 0 and below
     	if (enemyChoice == harryPotter && enemyChoice.hp <= 0){
