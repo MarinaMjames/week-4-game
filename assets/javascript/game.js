@@ -204,7 +204,7 @@ $('.attackButton').click(function() {
    		}
 // If first players hp goes to 0 the screen appears with You Lose!
    		if (firstPlayer.hp <= 0){
-   			$('.playersChoice').append('You Lose!');
+   			alert("You were to weak to defeat your enemy. Try Again!");
    			//automatically resets page when the player loses
    			window.location.href = window.location.href;
    		}
