@@ -46,7 +46,7 @@ $('.harry').click(function() {
 // move enemies to choiceToAttack div on screen 
 	// will move Dumbledore
 	$('.dumble').click(function() {
-		$('.choiceToAttack').appenbellad($('.dumble'));
+		$('.choiceToAttack').append($('.dumble'));
 		enemyChoice = dumbledore; 
 	$('.hpEnemyChoice').html(enemyChoice.hp);
 	});
