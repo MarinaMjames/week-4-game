@@ -7,170 +7,170 @@ var enemyChoice;
 var harryPotter = {
 	hp: 180,
 	attack: 6,
-	counter: 27, 
+	counter: 28, 
 };
 //dumbledore's fight stats
 var dumbledore = {
-	hp: 130,
-	attack: 4,
-	counter: 21, 
+	hp: 125,
+	attack: 5,
+	counter: 19, 
 };
 // bellatrix's fight stats
 var bellatrix = {
-	hp: 110, 
-	attack: 4, 
-	counter: 19, 
+	hp: 125, 
+	attack: 5, 
+	counter: 17, 
 };
 // voldemort's fight stats
 var voldemort = {
-	hp: 170, 
-	attack: 7, 
-	counter: 27, 
+	hp: 180, 
+	attack: 9, 
+	counter: 29, 
 };
 
 //Created on click functions for each character in order to pick the players character and move the other characters to the choiceToAttack div
 // Harry Potter as First Player
 
-$('.one').click(function() {
+$('.harry').click(function() {
 
 	if (!playersChoice) {
-		$('.playersChoice').append($('.one'));
+		$('.playersChoice').append($('.harry'));
 
 // Move other characters to enemies station
-		$('.enemies').append($('.two'));
-		$('.enemies').append($('.three'));
-		$('.enemies').append($('.four')); 
+		$('.enemies').append($('.dumble'));
+		$('.enemies').append($('.bella'));
+		$('.enemies').append($('.volde')); 
 		playersChoice = harryPotter;
 	}
 
 // move enemies to choiceToAttack div on screen 
 	// will move Dumbledore
-	$('.two').click(function() {
-		$('.choiceToAttack').append($('.two'));
+	$('.dumble').click(function() {
+		$('.choiceToAttack').appenbellad($('.dumble'));
 		enemyChoice = dumbledore; 
-	$('.hpSecondPlayer').html(enemyChoice.hp);
+	$('.hpEnemyChoiceEnemyChoiceEnemyChoice').html(enemyChoice.hp);
 	});
 
 	// will move Bellatrix
-	$('.three').click(function() {
-		$('.choiceToAttack').append($('.three'));
+	$('.bella').click(function() {
+		$('.choiceToAttack').append($('.bella'));
 		enemyChoice = bellatrix;
-	$('.hpSecondPlayer').html(enemyChoice.hp);
+	$('.hpEnemyChoice').html(enemyChoice.hp);
 	});
 
 	// will move Voldemort
-	$('.four').click(function() {
-		$('.choiceToAttack').append($('.four'));
+	$('.volde').click(function() {
+		$('.choiceToAttack').append($('.volde'));
 		enemyChoice = voldemort;
-	$('.hpSecondPlayer').html(enemyChoice.hp);
+	$('.hpEnemyChoice').html(enemyChoice.hp);
 	});	
 });
 
 // Dumbledore as First Player
-$('.two').click(function() {
+$('.dumble').click(function() {
 
 	if (!playersChoice) {
-		$('.playersChoice').append($('.two'));
+		$('.playersChoice').append($('.dumble'));
 	
 // Move other characters to enemies station
-		$('.enemies').append($('.one'));
-		$('.enemies').append($('.three'));
-		$('.enemies').append($('.four'));
+		$('.enemies').append($('.harry'));
+		$('.enemies').append($('.bella'));
+		$('.enemies').append($('.volde'));
 		playersChoice = dumbledore;
 	}
 	
 // move enemies to choiceToAttack div on screen
-	// will move Harry Potter
-	$('.one').click(function() {
-		$('.choiceToAttack').append($('.one'));
+	// will move Harry Potterharry
+	$('.harry').click(function() {
+		$('.choiceToAttack').append($('.harry'));
 		enemyChoice = harryPotter; 
-   		$('.hpSecondPlayer').html(enemyChoice.hp);
+   		$('.hpEnemyChoiceEnemyChoice').html(enemyChoice.hp);
 	});
 
 	// will move Bellatrix
-	$('.three').click(function() {
-		$('.choiceToAttack').append($('.three'));
+	$('.bella').click(function() {
+		$('.choiceToAttack').append($('.bella'));
 		enemyChoice = bellatrix;
-		$('.hpSecondPlayer').html(enemyChoice.hp);
+		$('.hpEnemyChoiceEnemyChoice').html(enemyChoice.hp);
 	});
 
 	// will move Voldemort
-	$('.four').click(function() {
-		$('.choiceToAttack').append($('.four'));
+	$('.volde').click(function() {
+		$('.choiceToAttack').append($('.volde'));
 		enemyChoice = voldemort;
-		$('.hpSecondPlayer').html(enemyChoice.hp);
+		$('.hpEnemyChoiceEnemyChoice').html(enemyChoice.hp);
 	});	
 });
 
 // Bellatrix as First Player
-$('.three').click(function() {
+$('.bella').click(function() {
 
 	if (!playersChoice) {
-		$('.playersChoice').append($('.three'));
+		$('.playersChoice').append($('.bella'));
 
 // Move other characters to enemies station
-		$('.enemies').append($('.one'));
-		$('.enemies').append($('.two'));
-		$('.enemies').append($('.four'));
+		$('.enemies').append($('.harry'));
+		$('.enemies').append($('.dumble'));
+		$('.enemies').append($('.volde'));
 		playersChoice = bellatrix;
 	}
 
 // move enemies to choiceToAttack div on screen
 	// will move Harry Potter
-	$('.one').click(function() {
-		$('.choiceToAttack').append($('.one'));
+	$('.harry').click(function() {
+		$('.choiceToAttack').append($('.harry'));
 		enemyChoice = harryPotter; 
-		$('.hpSecondPlayer').html(enemyChoice.hp);
+		$('.hpEnemyChoice').html(enemyChoice.hp);
 	});
 
 	// will move Dumbledore
-	$('.two').click(function() {
-		$('.choiceToAttack').append($('.two'));
+	$('.bella').click(function() {
+		$('.choiceToAttack').append($('.bella'));
 		enemyChoice = dumbledore;
-		$('.hpSecondPlayer').html(enemyChoice.hp);
+		$('.hpEnemyChoiceEnemyChoice').html(enemyChoice.hp);
 	});
 
 	// will move Voldemort
-	$('.four').click(function() {
-		$('.choiceToAttack').append($('.four'));
+	$('.volde').click(function() {
+		$('.choiceToAttack').append($('.volde'));
 		enemyChoice = voldemort;
-		$('.hpSecondPlayer').html(enemyChoice.hp);
+		$('.hpEnemyChoiceEnemyChoice').html(enemyChoice.hp);
 	});	
 });
 
 // Voldemort as First Player
-$('.four').click(function() {
+$('.volde').click(function() {
 
 	if (!playersChoice) {
-		$('.playersChoice').append($('.four'));
+		$('.playersChoice').append($('.volde'));
 
 // Move other characters to enemies station
-		$('.enemies').append($('.one'));
-		$('.enemies').append($('.two'));
-		$('.enemies').append($('.three'));
+		$('.enemies').append($('.harry'));
+		$('.enemies').append($('.dumble'));
+		$('.enemies').append($('.bella'));
 		playersChoice = voldemort;
 	}
 
 // move enemies to choiceToAttack div on screen
 	// will move Harry Potter
-	$('.one').click(function() {
-		$('.choiceToAttack').append($('.one'));
+	$('.harry').click(function() {
+		$('.choiceToAttack').append($('.harry'));
 		enemyChoice = harryPotter; 
-		$('.hpSecondPlayer').html(enemyChoice.hp);
+		$('.hpEnemyChoice').html(enemyChoice.hp);
 	});
 
 	// will move Dumbledore
-	$('.two').click(function() {
-		$('.choiceToAttack').append($('.two'));
+	$('.dumble').click(function() {
+		$('.choiceToAttack').append($('.dumble'));
 		enemyChoice = dumbledore;
-		$('.hpSecondPlayer').html(enemyChoice.hp);
+		$('.hpEnemyChoice').html(enemyChoice.hp);
 	});
 
 	// will move Voldemort
-	$('.three').click(function() {
-		$('.choiceToAttack').append($('.three'));
+	$('.bella').click(function() {
+		$('.choiceToAttack').append($('.bella'));
 		enemyChoice = bellatrix;
-		$('.hpSecondPlayer').html(enemyChoice.hp);
+		$('.hpEnemyChoice').html(enemyChoice.hp);
 	});	
 });	
 
@@ -183,24 +183,24 @@ $('.attackButton').click(function() {
  	//takes hp away from first play due to second players counter attack when the attack button is clicked
     playersChoice.hp -= enemyChoice.counter;
     //Shows the hp for the first and second players on the webpage
-    $('.hpFirstPlayer').html(playersChoice.hp);
-    $('.hpSecondPlayer').html(enemyChoice.hp);
+    $('.hpPlayersChoice').html(playersChoice.hp);
+    $('.hpEnemyChoice').html(enemyChoice.hp);
 
 // This removes harry potter from defender box if he is second player and has an hp of 0 and below
     	if (enemyChoice == harryPotter && enemyChoice.hp <= 0){
-    		$('.one').remove();
+    		$('.harry').remove();
     	}
 // This removes dumbledore from defender box if he is second player and has an hp of 0 and below
     	else if (enemyChoice == dumbledore && enemyChoice.hp <= 0){
-    		$('.two').remove(); 
+    		$('.dumble').remove(); 
     	}
 // This removes bellatrix from defender box if he is second player and has an hp of 0 and below
     	else if (enemyChoice == bellatrix && enemyChoice.hp <= 0){
-    		$('.three').remove();
+    		$('.bella').remove();
    		}
 // This removes voldemort from defender box if he is second player and has an hp of 0 and below
     	else if (enemyChoice == voldemort && enemyChoice.hp <= 0){
-    		$('.four').remove();
+    		$('.volde').remove();
    		}
 // If first players hp goes to 0 the screen appears with You Lose!
    		if (playersChoice.hp <= 0){
